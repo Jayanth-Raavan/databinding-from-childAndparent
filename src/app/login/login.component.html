@@ -1,0 +1,24 @@
+<div class="loginPage d-flex justify-content-center p-5 m-5">
+    <div class="wrapper w-50">
+        <h2 class="text-primary text-center">LOGIN</h2>
+        <form action="">
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="username">User Name</label>
+                    <input type="text" class="form-control" #username>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="text" class="form-control" #role>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <input type="submit" class="form-control" (click)="proceedLogin(username.value, role.value)">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of ListData">
+                <td>{{data.name}}</td>
+                <td>{{data.marks}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="m-2">
+        <h2 class="text-warning">Your name {{inputName}} is and obtained marks are {{inputMarks}}</h2>
+    </div>
+    <div class="m-2">
+        <div class="form-group">
+            <input type="text" class="form-control"#name>
+            <button class="btn btn-primary m-2" (click)="output.emit(name.value)">Change</button>
+        </div>
+    </div>
+    <h2 class="text-danger">{{localName}}</h2>
+</div>

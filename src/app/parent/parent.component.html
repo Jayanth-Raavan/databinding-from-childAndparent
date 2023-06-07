@@ -1,0 +1,36 @@
+
+<div class="row p-3 m-3 text-center">
+    <div class="col">
+      <h1 class="text-success">{{title}}</h1>
+      <hr>
+      <div>
+    <form action="">
+        <div class="mb-3">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" #name>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="name">Marks</label>
+            <div class="form-group">
+                <input type="text" class="form-control" #marks>
+            </div>
+        </div>
+        <div class="mb-3">
+            <div class="form-group">
+                <a type="submit" class="form-control btn btn-primary" (click)="transferData(name.value, marks.value)">Subimt</a>
+            </div>
+        </div>
+        <div class="mb-3">
+            <span class="text-success">{{response}}</span>
+        </div>
+    </form>
+</div>
+    </div>
+    <div class="col">
+      <h1 class="text-primary">Child Component</h1>
+      <hr>
+      <app-child [inputName]="nameInput" [inputMarks]="marksInput" (output)="updateTitle($event)"></app-child>
+    </div>
+  </div>
